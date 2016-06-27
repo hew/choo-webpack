@@ -1,1 +1,3 @@
-#choo github search demo
+# Choo Webpack
+
+> A basic Choo / Webpack setup.

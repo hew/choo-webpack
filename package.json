@@ -1,7 +1,7 @@
 {
-  "name": "Choo Starter",
+  "name": "Choo Webpack",
   "version": "1.0.0",
-  "description": "",
+  "description": "A basic Choo / Webpack setup.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --progress --profile --colors --display-error-details --display-cached --minimize",
@@ -11,9 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "choo": "*",
-    "velocity-animate": "^1.2.3",
-    "vq": "^1.2.0"
+    "choo": "*"
   },
   "devDependencies": {
     "babel-core": "^6.9.1",
