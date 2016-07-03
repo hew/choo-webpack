@@ -1,2 +1,3 @@
 require("choo")
-require("./css/style.css")
+require("animateplus")
+require("sprint-js")

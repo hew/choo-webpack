@@ -1,13 +1,15 @@
 import choo from 'choo'
-import {mainView} from './view'
+import insertCss from 'insert-css'
+import csjs from 'csjs'
+
+import { homeView } from './views/home'
+import { appStyles } from './css/style.js'
 
 const app = choo()
-document.title = 'Hummus is Gewd'
 
 app.model({
-  namespace: 'input',
   state: {
-    title: 'Hummus is Gewd'
+    title: 'Choo Starter'
   },
   reducers: {
     update: (action, state) => ({ title: action.payload })
@@ -18,9 +20,12 @@ app.model({
 })
 
 app.router((route) => [
-  route('/', mainView)
+  route('/', homeView),
 ])
 
+
+
+insertCss(appStyles)
 const tree = app.start()
 document.body.appendChild(tree)
 
