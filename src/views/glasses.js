@@ -18,6 +18,7 @@ export const glassesView = (params, state, send) => {
     })
   })
 
+  console.log(state)
   return view`
 		<div id="glasses">
       <img src=${require('../img/dealwithit.png')} alt="">
