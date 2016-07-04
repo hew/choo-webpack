@@ -11,10 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "animateplus": "^1.4.0",
     "choo": "*",
     "csjs": "^1.0.4",
     "insert-css": "^1.0.0",
-    "animateplus": "^1.4.0",
+    "on-load": "^3.1.0",
     "sprint-js": "*"
   },
   "devDependencies": {

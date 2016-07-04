@@ -7,7 +7,7 @@ import { glassesView } from './glasses'
 
 export const rootView = (params, state, send) => {
 
-  console.log(state)
+  let params = { init: state.home.init }
   return view`
 		<main>
       ${ homeView(params, state, send) }

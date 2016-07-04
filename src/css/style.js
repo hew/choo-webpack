@@ -16,9 +16,13 @@ export const root = csjs`
   }
 
   .glasses {
-    width: 50vw;
+    transform: translateY(-100%) translateX(-50%);
     position: absolute;
-    top: 0;
+    opacity: 0;
+  }
+
+  .glasses img {
+    width: 500px;
   }
 
 `;

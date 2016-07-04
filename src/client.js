@@ -10,12 +10,11 @@ const app = choo()
 app.model({
   namespace: 'home',
   state: {
-    title: 'Choo Starter'
+    title: 'Choo Starter',
+    init: true
   },
   reducers: {
-    update: (action, state) => ({
-      title: action.payload
-    })
+    update: (action, state) => ({ title: action.payload, init: false })
   },
   effects: {
     update: (action, state, send) => (document.title = action.payload)
