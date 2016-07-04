@@ -1,16 +1,14 @@
 import choo from 'choo'
-import insertCss from 'insert-css'
-import csjs from 'csjs'
-
 import { rootView } from './views/root'
 import { appStyles } from './css/style.js'
+import insertCss from 'insert-css'
 
 const app = choo()
 
 app.model({
   namespace: 'home',
   state: {
-    title: 'Choo Starter',
+    title: 'Browserify',
     init: true
   },
   reducers: {
@@ -21,18 +19,9 @@ app.model({
   }
 })
 
-app.model({
-  namespace: 'glasses',
-  state: {
-    animating: true
-  }
-})
-
 app.router((route) => [
-  route('/', rootView),
+  route('/', rootView)
 ])
-
-
 
 insertCss(appStyles)
 const tree = app.start()
