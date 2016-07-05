@@ -8,11 +8,12 @@ const app = choo()
 app.model({
   namespace: 'home',
   state: {
-    title: 'Browserify',
-    init: true
+    title: 'Type Something',
+    init: true,
+    symbol: '✗' 
   },
   reducers: {
-    update: (action, state) => ({ title: action.payload, init: false })
+    update: (action, state) => ({ title: action.payload, init: false, symbol: '✓' })
   },
   effects: {
     update: (action, state, send) => (document.title = action.payload)

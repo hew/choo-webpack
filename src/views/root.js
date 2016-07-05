@@ -7,7 +7,7 @@ export const rootView = (params, state, send) => {
   let { init } = state.home
   return view`
 		<main class=${root.container}>
-      ${homeView(params, state, send)}
+      ${homeView(init, state, send)}
       ${glassesView(init, state, send)}
 		</main>
   `

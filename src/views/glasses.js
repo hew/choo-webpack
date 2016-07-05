@@ -10,12 +10,12 @@ export const glassesView = (params, state, send) => {
   init ? initAnimation() : updateAnimation()
   return view`
    <div class=${root.inner}>
-   <img src=${require('../img/webpack.png')} alt="">
+   <img src=${require('../img/webpack.png')} alt=''>
       <div
         class=${root.glasses}
         id='glasses'
         >
-       <img src=${require('../img/dealwithit.png')} alt="">
+       <img src=${require('../img/dealwithit.png')} alt=''>
      </div>
    </div>  
   `
@@ -28,23 +28,28 @@ const initAnimation = () => {
       el: div,
       opacity: [0, 1],
       translateY: ['-100%', '100%'],
-      duration: 5000,
-      delay: 200
+      duration: 1000,
+      delay: 200,
+      easing: 'linear'
     })
   })
 }
 
-const updateAnimation = (updateValues) => {
+const updateAnimation = () => {
   window.requestAnimationFrame(() => {
     let div = $('#glasses')
-    let values = Math.floor(Math.random() * 10)
+    let r = Math.floor(Math.random() * 10)
+    let s = Math.floor(Math.random() * 10)
+    let t = Math.floor(Math.random() * Math.floor(Math.random() * 100))
     animate({
       el: div,
       opacity: [1, 1],
-      translateY: [`${values}0%`, `${values}0%`],
-      skewY: [`${values}deg`, `${values}deg`],
-      duration: 100,
+      translateY: [`${s}0%`, `${r}0%`],
+      rotateX: [`${t}deg`, `1${t}deg`],
+      duration: 0,
       delay: 0
     })
+    let html = document.querySelector('html');
+    html.style.backgroundColor = `rgb(255, ${t}${r}, ${s}${r})`
   })
 }
