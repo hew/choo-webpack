@@ -5,7 +5,7 @@
 
 ### Demo
 
-http://hew.tools/choo-webpack
+http://hew.github.io/choo-webpack
 
 ### What's Included
 * [Choo](https://github.com/yoshuawuyts/choo)
